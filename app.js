@@ -1,4 +1,13 @@
 const http = require('http')
+const { Client } = require('pg')
+
+const client = new Client({
+	user: 'mansia',
+	host: 'localhost',
+	database: 'minipro',
+	password: 'postgres',
+	port: 5432,
+})
 
 let fsm = require('fs')
 let fsd = require('fs')
