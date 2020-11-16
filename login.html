@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style type="text/css">
+		body {
+			background: #0C0D0F url(https://luxurylaunches.com/wp-content/uploads/2015/08/Nusantao_Doha_-1.jpg) center no-repeat scroll;
+			background-size: cover;
+			background-blend-mode: luminosity;
+			color: #ffffff;
+			font-family: Corbel;
+			letter-spacing: 10px;
+			padding: 20px;
+			display: flex;
+			align-content: center;
+			text-align: center;
+		}
+		.back {
+			float: left;
+			box-shadow: 1px 1px 6px rgba(255,255,255,0.4);
+			padding: 10px;
+
+		}
+		.back:hover {
+			box-shadow: 1px 1px 4px rgba(255,255,255,0.8);
+		}
+		.arrea {
+			background-color: rgba(164,165,166,0.6);
+			color: #0C0D0F;
+			box-shadow: 0px 0px 10px #0C0D0F;
+			height: 300px;
+			width: 400px;
+			text-align: center;
+			padding: 50px;
+			font-size: 26px;
+			border-style: hidden;
+			border-radius: 0px;
+		}
+		a {
+			text-decoration: none;
+			color: #ffffff;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		input {
+			border: 1px solid grey;
+			border-radius: 10px;
+			height: 25px;
+			width: 350px;
+		}
+		button {
+			width: 130px;
+			height: 40px;
+			background-color: #D6D6D6;
+			color: #0D0607;
+			border: solid 1px #444445;
+			border-radius: 3px;
+			font-size: 18px;
+			font-family: serif;
+			font-weight: bold;
+		}
+		button:hover {
+			cursor: pointer;
+			box-shadow: 0px 0px 6px #444445;
+		}
+
+		@keyframes opens {
+			from {border-left: #ffffff;
+				border-right: #ffffff;
+			}
+			to {
+
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<a href="index.html"><p class="back"> < Back </p></a>
+	<div style="margin-left: 20%;">
+		<h1>Admin Login</h1>
+		<div class="arrea">
+			<label>Username:</label>
+			<br><input type="text" name="user">
+			<br><br><label>Password:</label>
+			<br><input type="password" name="pass">
+			<br><br><span style="font-size: 18px; letter-spacing: 0px; padding: 10px;"> <a href="#">Create new account</a> </span>
+			<br><span style="font-size: 18px; letter-spacing: 0px; padding: 10px;"> <label> Remember me </label><input type="checkbox" name="remb" style="height: 15px; width: 15px; vertical-align: middle;"> </span>
+			<br><br><button>L O G I N</button>
+		</div>
+		<br>
+		<p><a href="#">Forgot your password?</a></p>
+	</div>	
+
+	<script type="text/javascript">
+		//margin-left: 20%; background-color: rgba(0,0,0,0.3);
+		//height: 500px; width:600px; margin-left:20%; background-color: rgba(0,0,0,0.8); text-align: center;
+	</script>
+</body>
+</html>

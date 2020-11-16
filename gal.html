@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+   		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width" initial-scale=1>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.min.css">
+		<script src="jquery.js"></script> 
+		<script> 
+    		$(function(){
+      			$("#divId").load("topbar.html"); 
+    		});
+    	</script> 
+		<style>
+		.para2{
+ 				
+				background-image: url("https://images.unsplash.com/photo-1511229577011-6b24bfc30871?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+
+  				min-height: 500px; 
+  				background-attachment: fixed;
+  				background-position: center;
+  				background-repeat: no-repeat;
+  				background-size: cover;
+			}	
+
+		.text-block{
+				position: absolute;
+				bottom: 350px;
+				right: 550px;
+				background-color: transparent;
+				color: black;
+				font-size: 30px;
+    			letter-spacing: 2px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+
+			* {
+			  box-sizing: border-box;
+			}
+
+			.row > .column {
+			  padding: 0 8px;
+			}
+
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+
+			.column {
+			  width: 25%;
+			}
+
+			.modal {
+			  display: none;
+			  position: fixed;
+			  z-index: 1;
+			  padding-top: 100px;
+			  left: 0;
+			  top: 0;
+			  width: 100%;
+			  height: 100%;
+			  overflow: auto;
+			  background-color: transparent;
+			}
+
+			/* Modal Content */
+			.modal-content {
+			  position: relative;
+			  background-color: #fefefe;
+			  margin: auto;
+			  padding: 0;
+			  width: 90%;
+			  max-width: 1200px;
+			}
+
+			/* The Close Button */
+			.close {
+			  color: black;
+			  position: absolute;
+			  top: 50px;
+			  right: 25px;
+			  font-size: 35px;
+			  font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+			  color: #999;
+			  text-decoration: none;
+			  cursor: pointer;
+			}
+
+			.mySlides {
+			  display: none;
+
+			}
+
+			.cursor {
+			  cursor: pointer;
+			}
+			.prev:hover,
+			.next:hover {
+			  background-color: rgba(0, 0, 0, 0.8);
+			}
+
+			/* Number text (1/3 etc) 
+			.numbertext {
+			  color: #f2f2f2;
+			  font-size: 12px;
+			  padding: 8px 12px;
+			  position: absolute;
+			  top: 0;
+			}*/
+
+			img {
+			  margin-bottom: -4px;
+			}
+
+			
+
+			.demo {
+			  opacity: 0.6;
+			}
+
+			.active,
+			.demo:hover {
+			  opacity: 1;
+			}
+
+			img.hover-shadow {
+			  transition: 0.3s;
+			}
+
+			.hover-shadow:hover {
+			  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		
+
+		<div>	     
+			<nav class="navbar navbar-expand-md bg-transparent navbar-dark fixed-top">
+			  <a class="navbar-brand" href="#"><img src="imgs/Apple_logo.png" class="d-inline-block align-top"  width="60" height="30"></a>
+				<ul class="navbar-nav">
+				    <li class="nav-item">
+				      <a class="nav-link" href="#">HOME</a>
+				    </li>
+				    <li class="nav-item">
+				      <a class="nav-link" href="#">WALLPAPERS</a>
+				    </li>
+				   <li class="nav-item">
+				      <a class="nav-link" href="#">MUSIC LIBRARY</a>
+				    </li>
+				   <li class="nav-item">
+				      <a class="nav-link" href="#">ABOUT US</a>
+				    </li>
+			    </ul>
+			</nav>
+		</div>
+		<div class="para2">
+			<div class="text-block">
+				 GALLERY
+			</div>
+		</div>
+
+		<div style="height:400px;background-color:white">
+		</div>
+		
+
+	   	<h2 style="text-align:center"></h2>
+
+		<div class="row">
+		  <div class="column">
+		    <img src="https://preview.colorlib.com/theme/steak/images/img_isotope_2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+		    <img src="https://preview.colorlib.com/theme/steak/images/img_isotope_4.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+		    <img src="https://preview.colorlib.com/theme/steak/images/img_isotope_8.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+		  </div>
+		  <div class="column">
+		    <img src="https://preview.colorlib.com/theme/steak/images/img_isotope_10.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+		  </div>
+		</div>
+
+		<div id="myModal" class="modal">
+		  <span class="close cursor" onclick="closeModal()">&times;</span>
+		  <div class="modal-content">
+		  	<center>
+		    <div class="mySlides">  
+		      <img src="https://preview.colorlib.com/theme/steak/images/img_isotope_2.jpg" style="width:65%;height:65%">
+		    </div>
+
+		    <div class="mySlides">
+		      <img src="https://preview.colorlib.com/theme/steak/images/img_isotope_4.jpg" style="width:65%;height:65%">
+		    </div>
+
+		    <div class="mySlides">
+		      <img src="https://preview.colorlib.com/theme/steak/images/img_isotope_8.jpg" style="width:65%;height:65%">
+		    </div>
+		    
+		    <div class="mySlides">
+		      <img src="https://preview.colorlib.com/theme/steak/images/img_isotope_10.jpg" style="width:65%;height:65%">
+		    </center>
+		    </div>
+		    </div>
+
+			<script>
+			function openModal() {
+			  document.getElementById("myModal").style.display = "block";
+			}
+
+			function closeModal() {
+			  document.getElementById("myModal").style.display = "none";
+			}
+
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			 
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";
+			  }
+			
+			slides[slideIndex-1].style.display = "block";
+			}
+			</script>
+
+
+
+
+	   	
+
+
+
+
+
+
+
+	   	
+	</body>
+</html>	
+
