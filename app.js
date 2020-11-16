@@ -33,7 +33,7 @@ const serverm = http.createServer(function(req, res) {
 const serverd = http.createServer(function(req, res) {
   res.statusCode = 200
   res.setHeader('Content-Type', 'text/html')
-  fsd.readFile('wdlmini.html', function (error, data) {
+  fsd.readFile('gal.html', function (error, data) {
         if (error) {
             res.writeHead(404);
             res.write('Whoops! File d not found!');
