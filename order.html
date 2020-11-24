@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order food</title>
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+			background-color: #dddddd;
+		}
+		.active-sp {
+			display: grid;
+			grid-template-columns: auto 400px;
+			text-align: center;
+		}
+		.menu-sp {
+			display: inline-grid;
+			grid-template-columns: auto auto;
+			grid-gap: 40px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.select-sp {
+			border: solid 1px #555555;
+			background-color: rgba(255,255,255,0.7);
+			height: 500px;
+		}
+		#checkout {
+			height: 50px;
+			width: 90px;
+			background-color: #454545;
+			color: white;
+			font-weight: bold;
+			font-size: 16px;
+			border: hidden;
+			margin-top: 40px;
+			margin-bottom: 20px;
+		}
+		.menu-item {
+			border: hidden 1px;
+			border-radius: 2px;
+			background-color: white;
+			height: 350px;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	
+		<h1 style="height: 70px; background-color: white; box-shadow: 0px 0px 2px #000000; width: 100%;">order</h1>
+	
+<div class="active-sp">
+	<div class="menu-sp">
+		<div class="menu-item">
+			<img src="http://www.pngpix.com/wp-content/uploads/2016/08/PNGPIX-COM-Food-Plate-PNG-Transparent-Image.png" height="40%" width="40%">
+			<p>Info</p>
+		</div>
+		<div class="menu-item">
+			<img src="https://grassrunfarms.com/wp-content/uploads/2015/07/foodservice-food-plate.png" height="40%" width="40%">
+			<p>Info</p>
+		</div>
+		<div class="menu-item">
+			<img src="https://img.pngio.com/dessert-png-3-png-image-png-desserts-500_338.png" height="40%" width="40%">
+			<p>Info</p>
+		</div>
+	</div>
+
+	<div class="select-sp">
+		<h1>Your Order</h1>
+		<div id="items">
+			Nothing selected
+		</div>
+		<button disabled="true" id="checkout">Proceed</button>
+	</div>
+</div>
+</body>
+</html>
