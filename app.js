@@ -2,9 +2,9 @@ const http = require('http')
 const { Client } = require('pg')
 
 const client = new Client({
-	user: 'mansia',
+	user: 'postgres',
 	host: 'localhost',
-	database: 'minipro',
+	database: 'restaurant',
 	password: 'postgres',
 	port: 5432,
 })
@@ -14,6 +14,8 @@ let fsd = require('fs')
 
 const portm = 3600
 const portd = 3400
+
+
 
 const serverm = http.createServer(function(req, res) {
   res.statusCode = 220
@@ -62,3 +64,10 @@ serverd.listen(portd, function(error) {
 		console.log('server listens to dia ' + portd)
 	}
 })
+
+client.connect()
+.then(() => console.log("connected"))
+.then(() => client.query("select * from food"))
+.then(results => console.table(results.rows))
+.catch(e => console.log(e))
+.finally(() => client.end())
