@@ -1,5 +1,7 @@
 const http = require('http')
 const { Client } = require('pg')
+var url = require('url');
+
 
 const client = new Client({
 	user: 'postgres',
@@ -19,8 +21,13 @@ const portd = 3400
 
 const serverm = http.createServer(function(req, res) {
   res.statusCode = 220
+  
+  var q = url.parse(req.url, true)
+  
+  	var filename = "." + q.pathname;
+  
   res.setHeader('Content-Type', 'text/html')
-  fsm.readFile('index.html', function (error, data) {
+  fsm.readFile(filename, function (error, data) {
         if (error) {
             res.writeHead(404);
             res.write('Whoops! File m not found!');
